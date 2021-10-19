@@ -8,7 +8,7 @@ Following commands allow to use Git via SSH
     # Check if ssh-agrnt is running
     * eval "$(ssh-agent -s)"
 
-    # Add it into ssh-agend
+    # Add it into ssh-agent
     * ssh-add ~/.ssh/id_ed25519
 
     # Test SSH connection to Github.com
