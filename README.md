@@ -1,9 +1,11 @@
 # Visual Studio
 ## Import Key
-When you see an error like 
+When you see an error like
+    
     Cannot import the following key file: companyname.pfx. The key file may be password protected. To correct this, try to import the certificate again or manually install the  certificate to the Strong Name CSP with the following key container name: VS_KEY_3E185446540E7F7A
     
 Then we can import the key via 
+    
     sn -i <KeyFile> <ContainerName>
 
 # SSH
