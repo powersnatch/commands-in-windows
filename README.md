@@ -58,8 +58,14 @@ If it shows a warning that AzureRM cannot co-exist with installed package then t
     Uninstall-AzureRm
 
 ## Commands
+    # connect
+    Connect-AzAccount
+    
     # list subscriptions
     az account list
 
     # set to a specific subscription
     Set-AzContext -Subscription "aaa-bbb-ccc-ddd-eee"
+
+    # disconnect
+    Disconnect-AzAccount
