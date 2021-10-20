@@ -1,15 +1,3 @@
-# Visual Studio
-## Import Key
-When you see an error like
-    
-    Cannot import the following key file: companyname.pfx. The key file may be password protected. 
-    To correct this, try to import the certificate again or manually install the certificate to the 
-    Strong Name CSP with the following key container name: VS_KEY_3E185446540E7F7A
-    
-Then we can import the key via 
-    
-    sn -i <KeyFile> <ContainerName>
-
 # SSH
 ## Setup SSH Keys for Git
 Following commands allow to use Git via SSH
@@ -44,3 +32,34 @@ If not setup in the ssh config then following command allows to connect via ssh 
 
     ssh -i <private key path> user@99.88.77.66
 
+# Visual Studio
+## Import Key
+When you see an error like
+    
+    Cannot import the following key file: companyname.pfx. The key file may be password protected. 
+    To correct this, try to import the certificate again or manually install the certificate to the 
+    Strong Name CSP with the following key container name: VS_KEY_3E185446540E7F7A
+    
+Then we can import the key via 
+    
+    sn -i <KeyFile> <ContainerName>
+
+# Azure CLI
+## Install required module 'Az'
+    # install
+    Install-Module -Name Az -AllowClobber -Scope CurrentUser
+    # import
+    Import-Module -Name Az
+When installation does not work then it can be installed via msi file too.
+
+If it shows a warning that AzureRM cannot co-exist with installed package then this can be uninstalled via 
+
+    # might be necessary to run as administrator
+    Uninstall-AzureRm
+
+## Commands
+    # list subscriptions
+    az account list
+
+    # set to a specific subscription
+    Set-AzContext -Subscription "aaa-bbb-ccc-ddd-eee"
