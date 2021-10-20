@@ -67,5 +67,22 @@ If it shows a warning that AzureRM cannot co-exist with installed package then t
     # set to a specific subscription
     Set-AzContext -Subscription "aaa-bbb-ccc-ddd-eee"
 
+    # get vm
+    Gte-AzVm
+
+    # create a new resource group
+    New-AzResourceGroup -Name <mygroup> -Location <EastUS>
+
+    # create a new vm
+    New-AzVm 
+    \ -ResourceGroupName <mygroup> 
+    \ -Name <myvm> 
+    \ -Location <EastUS> 
+    \ -VirtualNetworkName <mynet> 
+    \ -SubnetName <default> 
+    \ -SecurityGroupName <mysecgroup>
+    \ -PublicIpAddressname <mypublicip>
+    \ -OpenPorts <port1, port2>
+
     # disconnect
     Disconnect-AzAccount
