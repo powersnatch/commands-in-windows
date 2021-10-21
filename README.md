@@ -7,7 +7,7 @@ Following commands allow to use Git via SSH
     # Create new ssh key
     * ssh-keygen -t ed25519 -C "email@example.com"
 
-    # Check if ssh-agrnt is running
+    # Check if ssh-agent is running
     * eval "$(ssh-agent -s)"
 
     # Add it into ssh-agent
@@ -90,5 +90,8 @@ If it shows a warning that AzureRM cannot co-exist with installed package then t
 
 ## Commands
     
+    # login
+    az login
+
     # list subscriptions
     az account list
