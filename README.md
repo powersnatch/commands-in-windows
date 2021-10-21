@@ -1,3 +1,5 @@
+This document is a collection of some helpful commands :)
+
 # SSH
 ## Setup SSH Keys for Git
 Following commands allow to use Git via SSH
@@ -44,7 +46,7 @@ Then we can import the key via
     
     sn -i <KeyFile> <ContainerName>
 
-# Azure CLI
+# Azure Powershell (pwsh)
 ## Install required module 'Az'
     # install
     Install-Module -Name Az -AllowClobber -Scope CurrentUser
@@ -61,19 +63,16 @@ If it shows a warning that AzureRM cannot co-exist with installed package then t
     # connect
     Connect-AzAccount
     
-    # list subscriptions
-    az account list
-
     # set to a specific subscription
     Set-AzContext -Subscription "aaa-bbb-ccc-ddd-eee"
-
-    # get vm
-    Gte-AzVm
 
     # create a new resource group
     New-AzResourceGroup -Name <mygroup> -Location <EastUS>
 
-    # create a new vm
+    # get vm
+    Get-AzVm
+
+        # create a new vm
     New-AzVm 
     \ -ResourceGroupName <mygroup> 
     \ -Name <myvm> 
@@ -86,3 +85,10 @@ If it shows a warning that AzureRM cannot co-exist with installed package then t
 
     # disconnect
     Disconnect-AzAccount
+
+# Azure CLI
+
+## Commands
+    
+    # list subscriptions
+    az account list
