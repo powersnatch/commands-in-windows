@@ -60,6 +60,8 @@ If it shows a warning that AzureRM cannot co-exist with installed package then t
     Uninstall-AzureRm
 
 ## Commands
+Common PowerShell commands can be found [here](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/ps-common-ref)
+
     # connect
     Connect-AzAccount
     
@@ -89,7 +91,10 @@ If it shows a warning that AzureRM cannot co-exist with installed package then t
 # Azure CLI
 
 ## Commands
-    
+Common Azure CLI commands for managing Azure resources are described [here](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/cli-manage)  
+
+A full list of commands can be found here: [All Azure CLI Command Reference List](https://docs.microsoft.com/en-us/cli/azure/service-page/list%20a%20-%20z?view=azure-cli-latest)
+
     # login
     az login
 
